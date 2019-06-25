@@ -1,0 +1,397 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(中华人民共和国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#include ""res\\SuperTaskmgr.rc2""  // 非 Microsoft Visual C++ 编辑的资源\r\n"
+    "#include ""afxres.rc""     // 标准组件\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\SuperTaskmgr.ico"
+IDI_ICONNULL            ICON                    "res\\icon_null.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 180, 123
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 SuperTaskmgr"
+FONT 9, "宋体", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,12,20,20,20
+    LTEXT           "",IDC_STATIC_VERSION,49,32,119,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2016",IDC_STATIC,49,20,119,8
+    DEFPUSHBUTTON   "确定",IDOK,94,94,51,16,WS_GROUP
+    LTEXT           "本工具由肖遥开发，发现本程序有 bug 可以联系我哦~\nQQ：\t396519827\nEmail：\tfkxxyz@163.com",IDC_STATIC,12,50,156,40
+    PUSHBUTTON      "立刻联系我",IDC_BUTTON1,31,94,51,16
+END
+
+IDD_SUPERTASKMGR_DIALOG DIALOGEX 0, 0, 297, 201
+STYLE DS_SETFONT | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "SuperTaskmgr"
+CLASS "Class_SuperTaskmgr"
+FONT 9, "宋体", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "全选",ID_BUTTOM_SEL_ALL,5,125,47,16
+    PUSHBUTTON      "反选",ID_BUTTOM_SEL_REV,61,125,47,16
+    PUSHBUTTON      "非白名单",ID_BUTTOM_SEL_NOT_WHITE,114,125,47,16
+    PUSHBUTTON      "黑名单",ID_BUTTOM_SEL_BLACK,171,125,47,16
+    PUSHBUTTON      "一键结束",ID_ONEKEY_KILL,224,129,57,23,WS_DISABLED
+    LTEXT           "",IDC_STATIC_PROCESS_NUMBER,15,145,64,8
+    LTEXT           "",IDC_STATIC_CPU,29,155,64,8
+    LTEXT           "",IDC_STATIC_IO,34,165,64,8
+    LTEXT           "",IDC_STATIC_MEMORY,20,175,64,8
+    LTEXT           "",IDC_STATIC_SEND_SPEED,115,162,64,8
+    LTEXT           "",IDC_STATIC_RECV_SPEED,123,174,64,8
+    CONTROL         "",IDC_LSTPROC,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_GROUP | WS_TABSTOP,5,7,188,99
+END
+
+IDD_SELECT_COLUMN DIALOGEX 0, 0, 287, 205
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "选择列"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,20,153,50,14
+    PUSHBUTTON      "取消",IDCANCEL,118,156,50,14
+    CONTROL         "",IDC_LIST_COLOMN,"SysListView32",LVS_LIST | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,27,14,125,122
+END
+
+IDD_FLOATWINDOW_DIALOG DIALOGEX 0, 0, 102, 39
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+END
+
+IDD_LIMIT_SPEED DIALOGEX 0, 0, 148, 102
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "网速限制"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,7,81,50,14
+    PUSHBUTTON      "取消",IDCANCEL,91,81,50,14
+    LTEXT           "     上传：                             KB/s",IDC_STATIC,7,49,134,8
+    EDITTEXT        IDC_LIMIT_SEND,51,46,44,12,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "     下载：                             KB/s",IDC_STATIC,7,33,134,8
+    EDITTEXT        IDC_LIMIT_RECV,51,31,44,12,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "禁止访问网络",IDC_CHECK_DISABLE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,18,65,90,9
+    ICON            IDI_ICONNULL,IDC_STATIC_ICON,14,12,21,20
+    LTEXT           "",IDC_STATIC_PROCESS,33,13,101,10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 4,5,170,0
+ PRODUCTVERSION 4,5,170,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080403a8"
+        BEGIN
+            VALUE "CompanyName", "肖遥"
+            VALUE "FileDescription", "超级任务管理器"
+            VALUE "FileVersion", "4.5.170.0"
+            VALUE "InternalName", "SuperTaskmgr.exe"
+            VALUE "LegalCopyright", "qaz"
+            VALUE "LegalTrademarks", "qaz"
+            VALUE "OriginalFilename", "SuperTaskmgr.exe"
+            VALUE "ProductName", "超级任务管理器"
+            VALUE "ProductVersion", "4.5.170.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 936
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 12
+        RIGHTMARGIN, 168
+        TOPMARGIN, 12
+        BOTTOMMARGIN, 110
+    END
+
+    IDD_SUPERTASKMGR_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 5
+        RIGHTMARGIN, 290
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 193
+    END
+
+    IDD_SELECT_COLUMN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 280
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 198
+    END
+
+    IDD_FLOATWINDOW_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 95
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 34
+    END
+
+    IDD_LIMIT_SPEED, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 141
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 95
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU_MAIN MENU 
+BEGIN
+    POPUP "文件(&F)"
+    BEGIN
+        MENUITEM "新建任务(运行...)(&N)",             ID_NEW_TASK
+        MENUITEM SEPARATOR
+        MENUITEM "退出(&X)",                      ID_APP_EXIT
+    END
+    POPUP "操作(&O)"
+    BEGIN
+        MENUITEM "结束进程(&E)\tDEL",               ID_KILL
+        MENUITEM "强制结束进程(&F)",                  ID_FORCE_KILL
+        POPUP "设置优先级(&P)"
+        BEGIN
+            MENUITEM "实时(&R)",                      40506
+            MENUITEM "高(&H)",                       40505
+            MENUITEM "高于标准(&A)",                    40504
+            MENUITEM "标准(&N)",                      40503
+            MENUITEM "低于标准(&B)",                    40502
+            MENUITEM "低(&L)",                       40501
+        END
+        MENUITEM "清空专用工作集(&W)",                 ID_EMPTY_WORKING_SET
+        MENUITEM SEPARATOR
+        MENUITEM "暂停进程运行(&S)",                  ID_SUSPEND
+        MENUITEM "恢复进程运行(&R)",                  ID_RESUME
+        MENUITEM "网速限制(&L)",                    ID_LIMIT_SPEED
+        MENUITEM "禁止访问网络(&N)",                  ID_DISABLE_NETWORK
+        MENUITEM "允许访问网络(&O)",                  ID_ALLOW_NETWORK
+        MENUITEM SEPARATOR
+        MENUITEM " ",                           ID_SET_BLACK
+        MENUITEM " ",                           ID_SET_WHITE
+        MENUITEM " ",                           ID_SET_SYSTEM
+        MENUITEM SEPARATOR
+        MENUITEM "查看文件属性(&A)",                  ID_ATTRIB
+        MENUITEM "打开所在目录(&D)",                  ID_DIRECTORY
+        MENUITEM SEPARATOR
+        MENUITEM "进程详情(&M)",                    ID_DETAILS
+    END
+    POPUP "选择(&C)"
+    BEGIN
+        MENUITEM "全选(&A)\tCtrl + A",            ID_SEL_ALL
+        MENUITEM "反选(&E)\tCtrl + I",            ID_SEL_REV
+        MENUITEM SEPARATOR
+        MENUITEM "选择非白名单进程(&W)\tCtrl + W",      ID_SEL_NOT_WHITE
+        MENUITEM "选择黑名单进程(&B)\tCtrl + B",       ID_SEL_BLACK
+    END
+    POPUP "选项(&O)"
+    BEGIN
+        MENUITEM "前端显示(&A)",                    ID_SHOW_IN_FRONT
+        MENUITEM "最小化时隐藏(&H)",                  ID_MIN_HIDE
+        MENUITEM "显示悬浮窗(&F)",                   ID_SHOW_FLOATINGWINDOW
+        MENUITEM SEPARATOR
+        MENUITEM "刷新(&R)\tF5",                  ID_REFRESH
+        POPUP "自动刷新速度(&U)"
+        BEGIN
+            MENUITEM "高(&H)",                       41305
+            MENUITEM "较高(&A)",                      41304
+            MENUITEM "标准(&N)",                      41303
+            MENUITEM "较低(B)",                       41302
+            MENUITEM "低(&L)",                       41301
+            MENUITEM "暂停(&P)",                      41300
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "显示系统关键进程(&S)",                ID_SHOW_SYSTEM
+        MENUITEM "选择列..(&L)",                   ID_SELECT_COLUMN
+        MENUITEM SEPARATOR
+        MENUITEM "恢复默认设置(&D)",                  ID_LOAD_DEFAULT
+        MENUITEM SEPARATOR
+        MENUITEM "白名单进程设置(&W)",                 ID_EDIT_WHITE
+        MENUITEM "黑名单进程设置(&B)",                 ID_EDIT_BLACK
+    END
+    POPUP "帮助(&H)"
+    BEGIN
+        MENUITEM "检查新版本(&U)",                   ID_UPDATE
+        MENUITEM "关于(&A)",                      ID_APP_ABOUT
+    END
+END
+
+IDR_MENU_NOTIFY MENU 
+BEGIN
+    POPUP "Notify"
+    BEGIN
+        MENUITEM "显示(&S)",                      ID_SHOW
+        MENUITEM SEPARATOR
+        MENUITEM "退出(&X)",                      ID_APP_EXIT
+    END
+    POPUP "ColumnRClick"
+    BEGIN
+        MENUITEM "隐藏该列(&H)",                    ID_HIDE_THIS_COLUMN
+        MENUITEM SEPARATOR
+        MENUITEM "选择列..(&L)",                   ID_SELECT_COLUMN
+    END
+    POPUP "FloatingWindow"
+    BEGIN
+        MENUITEM "显示主窗口(&S)",                   ID_SHOW
+        MENUITEM SEPARATOR
+        MENUITEM "隐藏悬浮窗(&F)",                   ID_SHOW_FLOATINGWINDOW
+        MENUITEM SEPARATOR
+        MENUITEM "退出(&X)",                      ID_APP_EXIT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_ACCELERATOR1 ACCELERATORS 
+BEGIN
+    VK_DELETE,      ID_KILL,                VIRTKEY, NOINVERT
+    VK_F5,          ID_REFRESH,             VIRTKEY, NOINVERT
+    "A",            ID_SEL_ALL,             VIRTKEY, CONTROL, NOINVERT
+    "B",            ID_SEL_BLACK,           VIRTKEY, CONTROL, NOINVERT
+    "W",            ID_SEL_NOT_WHITE,       VIRTKEY, CONTROL, NOINVERT
+    "I",            ID_SEL_REV,             VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_SHOW_SYSTEM,         VIRTKEY, CONTROL, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "关于 SuperTaskmgr(&A)..."
+END
+
+STRINGTABLE 
+BEGIN
+    ID_APP_ABOUT            "显示程序信息、版本号和版权\n关于"
+END
+
+#endif    // 中文(中华人民共和国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE 4, 2
+#pragma code_page(936)
+#include "res\SuperTaskmgr.rc2"  // 非 Microsoft Visual C++ 编辑的资源
+#include "afxres.rc"     // 标准组件
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
